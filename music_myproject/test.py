@@ -121,7 +121,8 @@ async def play(bot,msg):
     app.join_group_call(msg.chat.id,AudioPiped(result,))
 @bot.on_message(filters.command('show'))
 async def song_add(bot,msg):
-    my_que.get_data()
+    result = my_que.get_data()
+    print(result)
     #pytube_me.download(text)    
 
 asyncio.run(bot.run())
